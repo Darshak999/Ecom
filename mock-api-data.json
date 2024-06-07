@@ -1,0 +1,40 @@
+{
+  "user": [
+    {
+      "name":"Dasrahak kalathiya",
+      "mobnumbar":"9924757492",
+      "age": 18,
+      "dob": "19-09-2005",
+      "email": "darshak123@gmain.com",
+      "password" : "Darshak@999",
+      "address": {
+      "addLine1" :"surat",
+      "addLine2" : "Rajkot",
+      "city" : "surat",
+      "state" : "Gujrat",
+      "zipcode" : "123456"
+      },
+      "language": [
+        "Gujrati",
+        "Hindi",
+        "English",
+        "talugu",
+        "maliyalam",
+        "kanad",
+        "bhojpuri",
+        "panjabi",
+        "marathi",
+        "rajshthni",
+        "bagali"
+      ],
+      "gender": "Male",
+      "aboutYou" : "I an a Delopar in angular",
+      "uploadPhoto" : "./src/assets/darshak.jpg",
+      "agreetc" :"true",
+      "id" : 1,
+      "role" : "admin"
+    }
+  ]
+}
+
+
