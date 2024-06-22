@@ -1,144 +1,143 @@
 <div class="jumbotron">
-  <div class="conativner">
+  <div class="container">
     <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <h3>Registration - Angular 17 Reactive Froms With validation </h3>
-        <form  >
-          <div class="form-grop">
+      <!-- Registration Form -->
+      <div class="col-md-6 offset-md-3" *ngIf="showRegistrationForm">
+        <h3>Registration - Angular Reactive Forms with Validation</h3>
+        <form [formGroup]="Singup" (ngSubmit)="onSubmitSignUp()">
+          <div>
             <label for="name">Name</label>
-            <input type="text" class="form-control" formcontrolName="name">
+            <input type="text" pInputText class="form-control" formControlName="name" id="name">
           </div>
 
-          <div class="form-grop">
+          <div>
             <label for="mobile">Mobile Number</label>
-            <input type="tel" class="form-control" formcontrolName="mobNumber">
+            <input type="tel" class="form-control" formControlName="mobNumber" id="mobile">
           </div>
 
-          <div class="form-grop">
-            <label for="age">Entar Your age</label>
-            <input type="number" class="form-control" formcontrolName="age">
+          <div>
+            <label for="age">Enter Your Age</label>
+            <input type="number" class="form-control" formControlName="age" id="age">
           </div>
 
-          <div class="form-grop">
-            <label for="dob">Entar Your Bod</label>
-            <input type="date" class="form-control" formcontrolName="dob">
+          <div>
+            <label for="dob">Enter Your DOB</label>
+            <input type="date" class="form-control" formControlName="dob" id="dob">
           </div>
 
-          <!-- New Row -->
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="email">Email</label>
-              <input type="email" class="form-control" placeholder="darshak@gmail.com" formControlName="email">
+              <input type="email" class="form-control" formControlName="email" id="email">
             </div>
-
-            <div class="form-group col-md-6">
+            <div class="col-md-6">
               <label for="password">Password</label>
-              <input type="password" class="form-control" placeholder="password" formControlName="password">
+              <input type="password" class="form-control" formControlName="password" id="password">
             </div>
+          </div>
 
-            <div class="form-group" >
-              <label for="address">Address</label>
-              <input type="text" class="form-control" placeholder="A/1002" formControlName="addLine1">
-            </div>
+          <div>
+            <label for="address">Address</label>
+            <input type="text" aria-label="Search" class="form-control" formControlName="addLine1" id="addLine1">
+          </div>
 
-            <div class="form-group" >
-              <label for="address2">Address 2</label>
-              <input type="text" class="form-control" placeholder="apatment,floor" formControlName="addLine2">
-            </div>
+          <div>
+            <label for="address2">Address 2</label>
+            <input type="text" aria-label="Search" class="form-control" formControlName="addLine2" id="addLine2">
           </div>
 
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="city">City</label>
-              <input type="text" class="form-control" placeholder="city" formControlName="city">
+              <input type="text" class="form-control" formControlName="city" id="city">
             </div>
             <div class="form-group col-md-4">
               <label for="state">State</label>
-            <select  id="inputState" class="form-control" formControlName="state" >
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
+              <select id="state" class="form-control" formControlName="state">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
             </div>
             <div class="form-group col-md-2">
-              <label for="zipcode">Zip code</label>
-              <input type="text" class="form-control" placeholder="zipcode" formControlName="zipcode">
+              <label for="zipcode">Zip Code</label>
+              <input type="text" class="form-control" formControlName="zipcode" id="zipcode">
             </div>
           </div>
 
           <div class="form-group">
             <label for="language">Language</label>
-            <select multiple class="form-control" formControlName="language">
+            <select multiple class="form-control" formControlName="language" id="language">
               <option>Guj</option>
               <option>Eng</option>
-              <option>otherrs</option>
+              <option>Others</option>
             </select>
           </div>
 
           <div class="form-group">
             <label for="gender">Gender</label>
             <div class="form-check form-check-inline">
-              <input type="radio" class="form-check-inline" formControlName="gender"
-              value="Male">
-              <label for="male" class="form-check-inline">Male</label>
+              <input type="radio" class="form-check-input" formControlName="gender" value="Male" id="male">
+              <label for="male" class="form-check-label">Male</label>
             </div>
-            <div class="form-check-inline">
-              <input type="radio" class="form-check-inline" formControlName="gender"
-              value="Female">
-              <label for="female" class="form-check-inline">Female</label>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" formControlName="gender" value="Female" id="female">
+              <label for="female" class="form-check-label">Female</label>
             </div>
-            <div class="form-check-inline">
-              <input type="radio" class="form-check-inline" formControlName="gender"
-              value="others" disabled>
-              <label for="others" class="form-check-inline">Others</label>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" formControlName="gender" value="Others" id="others">
+              <label for="others" class="form-check-label">Others</label>
             </div>
-          </div>
-
-          <div class="form-grop">
-            <label for="somthingAboutYou">Somthing About You</label>
-            <textarea class="form-control" rows="3" formControlName="aboutyou"></textarea>
-          </div>
-          <div class="form-grop">
-            <label for="uploadphoto">Upload Your Photo</label>
-            <input type="file" class="form-control" formControlName="uploadphoto">
-          </div>
-          <div class="form-grop">
-            <input type="checkbox" class="form-check-inline" formControlName="agreetc">
-            <label for="agreetc" class="form-check-inline">Terms and Conditions</label>
           </div>
 
           <div class="form-group">
-            <label for="state">What Do You What ?</label>
-          <select  class="form-control" formControlName="role" >
-            <option value="seller">Seller</option>
-            <option value="buyer">Buyer</option>
-          </select>
+            <label for="aboutYou">Something About You</label>
+            <textarea class="form-control" rows="3" formControlName="aboutYou" id="aboutYou"></textarea>
           </div>
 
           <div class="form-group">
-            <button class="btn btn-primary">Register</button>
+            <label for="uploadPhoto">Upload Your Photo</label>
+            <input type="file" class="form-control" formControlName="uploadPhoto" id="uploadPhoto">
+          </div>
+
+          <div class="form-group">
+            <input type="checkbox" class="form-check-input" formControlName="agreeTc" id="agreeTc">
+            <label for="agreeTc" class="form-check-label">Terms and Conditions</label>
+          </div>
+
+          <div class="form-group">
+            <label for="role">What Do You Want?</label>
+            <select class="form-control" formControlName="role" id="role">
+              <option value="seller">Seller</option>
+              <option value="buyer">Buyer</option>
+            </select>
+          </div><br/>
+
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Register</button>
           </div>
         </form>
-
-        <!-- login form here  -->
-         <p class="sim-pointer" routerLink="/sign-in" > Alread have an Account click here to Login</p>
+        <p class="sim-pointer" (click)="toggleForms()">Already have an account? Click here to login</p>
       </div>
-      <div class="col-md-6 offset-md-3">
-        <h3>Login - Angulal 17 Template drivend from with validation </h3>
-        <form>
+
+      <!-- Login Form -->
+      <div class="col-md-6 offset-md-3" *ngIf="showLoginForm">
+        <h3>Login - Angular Template-driven Form with Validation</h3>
+        <form [formGroup]="Sigin" (ngSubmit)="onSubmitSignIn()">
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" name="userEmail">
+            <label for="userEmail">Email</label>
+            <input type="email" class="form-control" formControlName="userEmail" id="userEmail">
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" name="userPassword">
+            <label for="userPassword">Password</label>
+            <input type="password" class="form-control" formControlName="userPassword" id="userPassword">
           </div>
           <div class="form-group">
-            <button class="btn btn-primary">Login</button>
+            <button class="btn btn-primary" type="submit">Login</button>
           </div>
         </form>
-        <p class="sim-pointer" routerLink="/sign-up" > Don't have an Account click here to Register</p>
+        <p class="sim-pointer" (click)="toggleForms()">Don't have an account? Click here to register</p>
       </div>
     </div>
   </div>
 </div>
+

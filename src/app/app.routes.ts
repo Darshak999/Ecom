@@ -4,7 +4,6 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
-
 import { UserCrudComponent } from './admin/user-crud/user-crud.component';
 import { ProductComponent } from './product/product.component';
 import { SigninSignupComponent } from './customer/signin-signup/signin-signup.component';
@@ -14,6 +13,7 @@ import { CheckoutComponent } from './customer/buyer/checkout/checkout.component'
 import { PageNotFoundComponent } from './shared/layouts/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
+  { path: 'sing-in2' ,component:SigninSignupComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'my-profile', component: UserProfileComponent },
